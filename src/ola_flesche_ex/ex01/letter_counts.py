@@ -5,8 +5,8 @@ def letter_freq(txt):
     coun = []
     for n in lett:
         coun.append(lett.count(n))
-        dictio = dict(zip(lett, coun))
-    return dictio
+    freq = dict(zip(lett, coun))
+    return freq
 
 
 if __name__ == '__main__':
