@@ -1,10 +1,12 @@
 def char_counts(textfilename):
-    file = open('textfilename', 'r')
-    results = [None] * 256
-    for letter in file:
-        results[ord(letter)] += 1
-    return results
-    file.close()
+    with open(textfilename, 'r') as file:
+        txt = file.read()
+        results = [0] * 256
+        for letter in txt:
+            ind = ord(letter)
+            if ind not in results:
+                results[ind] += 1
+        return results
 
 
 if __name__ == '__main__':
