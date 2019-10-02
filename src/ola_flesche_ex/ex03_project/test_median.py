@@ -6,12 +6,6 @@ import pytest
 
 
 def median(data):
-    """
-    Returns median of data.
-
-    :param data: An iterable of containing numbers
-    :return: Median of data
-    """
     sorted_data = sorted(data)
     num_elements = len(sorted_data)
 
@@ -56,8 +50,8 @@ def test_value_error():
 
 def test_original_unchanged():
     origin_list = [2, 5, 4, 7, 8]
-    median_found = median(origin_list)
-    assert origin_list == origin_list
+    median(origin_list)
+    assert origin_list == [2, 5, 4, 7, 8]
 
 
 def test_tuples():
