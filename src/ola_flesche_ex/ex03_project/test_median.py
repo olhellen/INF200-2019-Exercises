@@ -19,3 +19,8 @@ def median(data):
 def test_one_element():
     assert median([1]) == 1
 
+
+def test_odd_number():
+    odd_list = [1, 4, 5, 3, 7]
+    assert median(odd_list) == 4
+
