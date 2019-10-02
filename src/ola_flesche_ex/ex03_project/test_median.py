@@ -40,5 +40,10 @@ def test_reverse_ordere():
     assert median(rev_list) == 3
 
 
+def test_value_error():
+    with pytest.raises(ValueError):
+        median([])
+
+
 
 
