@@ -9,11 +9,17 @@ def median(data):
     :param data: An iterable of containing numbers
     :return: Median of data
     """
+    sorted_data = sorted(data)
+    num_elements = len(sorted_data)
 
-    sdata = sorted(data)
-    n = len(sdata)
-    return (sdata[n//2] if n % 2 == 1
-        else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
+    if num_elements % 2 == 1:
+        return sorted_data[num_elements // 2]
+    elif num_elements == 0
+        raise ValueError
+    else:
+        return (
+            sorted_data[num_elements // 2 - 1] + sorted_data[num_elements // 2]
+        ) / 2
 
 
 def test_one_element():
@@ -52,7 +58,6 @@ def test_original_unchanged():
 
 
 def test_tuples():
-    tuple = (1, 3, 2, 7, 5)
-    assert median(tuple) == 3
-
-
+    tup = (1, 3, 2, 7, 5)
+    lis = [1, 3, 2, 7, 5]
+    assert median(tup) == median(lis)
