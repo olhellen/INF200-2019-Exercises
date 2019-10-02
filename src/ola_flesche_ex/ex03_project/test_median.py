@@ -24,3 +24,10 @@ def test_odd_number():
     odd_list = [1, 4, 5, 3, 7]
     assert median(odd_list) == 4
 
+
+def test_even_numbers():
+    even_list = [1, 6, 3, 2, 4, 5]
+    assert median(even_list) == 3.5
+
+
+
