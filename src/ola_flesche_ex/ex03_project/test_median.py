@@ -30,4 +30,10 @@ def test_even_numbers():
     assert median(even_list) == 3.5
 
 
+def test_ordered():
+    ord_list = [1, 2, 3, 4]
+    assert median(ord_list) == 2.5
+
+
+
 
