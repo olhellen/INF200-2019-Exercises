@@ -51,5 +51,8 @@ def test_original_unchanged():
     assert origin_list == origin_list
 
 
+def test_tuples():
+    tuple = (1, 3, 2, 7, 5)
+    assert median(tuple) == 3
 
 
