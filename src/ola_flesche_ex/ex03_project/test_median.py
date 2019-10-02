@@ -45,5 +45,11 @@ def test_value_error():
         median([])
 
 
+def test_original_unchanged():
+    origin_list = [2, 5, 4, 7, 8]
+    median_found = median(origin_list)
+    assert origin_list == origin_list
+
+
 
 
