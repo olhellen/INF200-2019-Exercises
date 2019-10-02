@@ -35,5 +35,10 @@ def test_ordered():
     assert median(ord_list) == 2.5
 
 
+def test_reverse_ordere():
+    rev_list = [4, 3, 2]
+    assert median(rev_list) == 3
+
+
 
 
