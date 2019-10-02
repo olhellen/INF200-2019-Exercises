@@ -2,6 +2,9 @@ __author__ = 'Ola Flesche Hellenes'
 __email__ = 'olhellen@nmbu.no'
 
 
+import pytest
+
+
 def median(data):
     """
     Returns median of data.
@@ -14,7 +17,7 @@ def median(data):
 
     if num_elements % 2 == 1:
         return sorted_data[num_elements // 2]
-    elif num_elements == 0
+    elif num_elements == 0:
         raise ValueError
     else:
         return (
