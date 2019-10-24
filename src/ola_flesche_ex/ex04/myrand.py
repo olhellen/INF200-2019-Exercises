@@ -19,10 +19,19 @@ class LCGRand:
 class ListRand:
     def __init__(self, numbers):
         self.numbers = numbers
+        self.number = 0
 
     def rand(self):
-        for number in enumerate(self.numbers):
-            if number <= len(self.numbers):
-                return
-            else:
-                raise RuntimeError
+        while True:
+            for ind, number in enumerate(self.numbers):
+                if number <= len(self.numbers):
+                    return number
+                else:
+                    raise RuntimeError
+
+
+if __name__ == "__main__":
+    lcg = LCGRand(67)
+    lis = ListRand([4, 7, 9, 3, 40])
+    print(f'\nA few random numbers generated from LCGRand with 67 as seed:' f'{[lcg.rand(), lcg.rand(), lcg.rand()]}')
+    print(f'Numbers generated from the ListRand class:' f'{[(lis.rand()), (lis.rand()), lis.rand(), lis.rand(), lis.rand()]}')
