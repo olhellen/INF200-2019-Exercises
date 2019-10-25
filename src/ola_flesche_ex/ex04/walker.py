@@ -29,28 +29,28 @@ class Walker:
         return self.x0
 
     def get_steps(self):
-        return self.walking()
+        return self.steps
 
 
 if __name__ == "__main__":
     print(
         f'\nDistance:   1 -> Path lengths:' 
-        f'{sorted([Walker(0,1).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0,1).walking() for step in range(5)])}')
     print(
         f'Distance:   2 -> Path lengths:' 
-        f'{sorted([Walker(0, 2).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 2).walking() for step in range(5)])}')
     print(
         f'Distance:   5 -> Path lengths:' 
-        f'{sorted([Walker(0, 5).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 5).walking() for step in range(5)])}')
     print(
         f'Distance:   10 -> Path lengths:' 
-        f'{sorted([Walker(0, 10).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 10).walking() for step in range(5)])}')
     print(
         f'Distance:   20 -> Path lengths:' 
-        f'{sorted([Walker(0, 20).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 20).walking() for step in range(5)])}')
     print(
         f'Distance:   50 -> Path lengths:' 
-        f'{sorted([Walker(0, 50).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 50).walking() for step in range(5)])}')
     print(
         f'Distance:   100 -> Path lengths:' 
-        f'{sorted([Walker(0, 100).get_steps() for step in range(5)])}')
+        f'{sorted([Walker(0, 100).walking() for step in range(5)])}')

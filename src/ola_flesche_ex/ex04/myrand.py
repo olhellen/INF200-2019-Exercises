@@ -20,14 +20,15 @@ class ListRand:
     def __init__(self, numbers):
         self.numbers = numbers
         self.number = 0
+        self.counts = -1
 
     def rand(self):
-        while True:
-            for ind, number in enumerate(self.numbers):
-                if number <= len(self.numbers):
-                    return number
-                else:
-                    raise RuntimeError
+        if self.counts == len(self.numbers)-1:
+            raise RuntimeError
+        else:
+            self.counts += 1
+            num = self.numbers[self.counts]
+        return num
 
 
 if __name__ == "__main__":
