@@ -40,19 +40,18 @@ class Simulation:
         self.steps = 0
 
     def single_walk(self):
-        while self.home <= self.home:
-            self.steps += 1
-            self.home = self.home 
-        return self.steps
+        random.seed(self.seed)
+        return Walker(self.start, self.home).walking()
 
     def run_simulation(self, num_walks):
         step_list = []
+        random.seed(self.seed)
         for i in range(num_walks):
-            step_list.append(self.single_walk())
+            step_list.append(Walker(self.start, self.home).walking())
         return step_list
 
 
 if __name__ == "__main__":
     print(f'{Simulation(0,10,12345).single_walk()}')
-    #print(f'20 simulation walks from start 0 to home 10 with seed value 12345'
-      #    f'{sorted(Simulation(0,10,12345).run_simulation(20))}')
+    print(f'20 simulation walks from start 0 to home 10 with seed value 12345'
+          f'{sorted(Simulation(0,10,12345).run_simulation(20))}'for i in range(2))
