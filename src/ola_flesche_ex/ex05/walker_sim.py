@@ -52,6 +52,15 @@ class Simulation:
 
 
 if __name__ == "__main__":
-    print(f'{Simulation(0,10,12345).single_walk()}')
-    print(f'20 simulation walks from start 0 to home 10 with seed value 12345: '
-          f'{[sorted(Simulation(0,10,12345).run_simulation(20)for step in range(2))]}')
+    print(
+        f'20 simulation walks from start 0 to home 10 with seed value 12345: '
+        f'{[Simulation(0,10,12345).run_simulation(20) for step in range(2)]}')
+    print(
+        f'20 simulation walks from start 0 to home 10 with seed value 54321: '
+        f'{Simulation(0, 10, 54321).run_simulation(20)}')
+    print(
+        f'\n20 simulation walks from start 10 to home 0 with seed value 12345: '
+        f'{[Simulation(10, 0, 12345).run_simulation(20) for step in range(2)]}')
+    print(
+        f'20 simulation walks from start 10 to home 0 with seed value 54321: '
+        f'{Simulation(10, 0, 54321).run_simulation(20)}')
