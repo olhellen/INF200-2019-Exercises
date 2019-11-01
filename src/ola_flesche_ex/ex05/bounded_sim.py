@@ -32,17 +32,13 @@ class BoundedSimulation(Simulation):
     def limit_sim(self):
         sim_walker = BoundedWalker(self.start, self.home, self.left_limit,
                                    self.right_limit)
-        n = 0
-        while not sim_walker.is_at_home():
-            sim_walker.move()
-            n += 1
-        return n
+        return sim_walker()
 
 
 if __name__ == "__main__":
     print(f'{[BoundedWalker(0, 20, 0, 20).limit() for _ in range(20)]}')
     print(f'{[BoundedWalker(0, 20, -10, 20).limit() for _ in range(20)]}')
-    print(f'{[BoundedSimulation(0, 20, 12, 0, 20).limit_sim()for _ in range(20)]}')
-    print(f'{BoundedSimulation(0, 20, 12, -10, 20).limit_sim()}')
-    print(f'{BoundedSimulation(0, 20, 12, -100, 20).limit_sim()}')
-    print(f'{BoundedSimulation(0, 20, 12, -1000, 20).limit_sim()}')
+    print(f'{BoundedSimulation(0, 20, 12, 0, 20).run_simulation(20)}')
+    print(f'{BoundedSimulation(0, 20, 12, -10, 20).run_simulation(20)}')
+    print(f'{BoundedSimulation(0, 20, 12, -100, 20).run_simulation(20)}')
+    print(f'{BoundedSimulation(0, 20, 12, -1000, 20).run_simulation(20)}')
