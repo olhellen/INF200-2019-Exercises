@@ -51,9 +51,6 @@ class Simulation:
 
 
 if __name__ == "__main__":
-    a = Simulation(0, 10, 12345)
-    print(a.single_walk())
-
     print(
         f'20 simulation walks from start 0 to home 10 with seed value 12345:\n'
         f'{[Simulation(0,10,12345).run_simulation(20) for step in range(2)]}')

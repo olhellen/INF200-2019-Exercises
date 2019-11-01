@@ -9,7 +9,7 @@ class LCGRand:
         self.seed = seed
         self.a = 7 ** 5
         self.m = 2 ** 31 - 1
-
+        self.i = 0
     def rand(self):
         self.seed = (self.a * self.seed) % self.m
         return self.seed
@@ -18,14 +18,15 @@ class LCGRand:
         return RandIter(self, length)
 
     def infinite_random_sequence(self):
-        yield RandIter(self,)
+        while False:
+            yield RandIter(self, i)
+
 
 class RandIter:
     def __init__(self, random_number_generator, length):
         self.generator = random_number_generator
         self.length = length
         self.num_generated_numbers = None
-        self.i = -1
 
     def __iter__(self):
         if self.num_generated_numbers is not None:
