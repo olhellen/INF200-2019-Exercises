@@ -30,9 +30,9 @@ class BoundedSimulation(Simulation):
         self.right_limit = right_limit
 
     def limit_sim(self):
-        sim_walker = BoundedWalker(self.start, self.home, self.left_limit,
-                                   self.right_limit)
-        return sim_walker()
+
+        return BoundedWalker(self.start, self.home, self.left_limit,
+                             self.right_limit)
 
 
 if __name__ == "__main__":

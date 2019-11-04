@@ -44,12 +44,12 @@ class RandIter:
 
 
 if __name__ == "__main__":
-    random_number_generator = LCGRand(1)
-    for rand in random_number_generator.random_sequence(10):
+    generator = LCGRand(1)
+    for rand in generator.random_sequence(10):
         print(rand)
 
     for (i, rand) in \
-            enumerate(random_number_generator.infinite_random_sequence()):
+            enumerate(generator.infinite_random_sequence()):
         print(f'The {i}-th random number is {rand}')
         if i > 100:
             break
