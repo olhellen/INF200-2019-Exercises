@@ -37,8 +37,8 @@ def test_walker():
     start, home = 10, 20
     w = Walker(start, home)
     assert not w.is_at_home()
-    move()
+    w.move()
     assert w.get_position() != start
-    move()
+    w.move()
     assert w.get_steps() == 2
 
